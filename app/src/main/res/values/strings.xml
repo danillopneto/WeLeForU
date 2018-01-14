@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "WeLeForU"><!ENTITY author "Danillo">]>
+
+<resources>
+    <string name="app_name">&appname;</string>
+    <string name="welcome_message">Bem vindo ao &appname;</string>
+    <string name="author_message">App construído por &author;</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Senha</string>
+    <string name="login">Login</string>
+    <string name="forgotPassword">Esqueci a senha</string>
+    <string name="register">Registrar-se</string>
+    <string name="empty_email">E-mail não informado!</string>
+    <string name="empty_password">Senha não informada!</string>
+    <string name="valid_login">Login efetuado com sucesso.</string>
+    <string name="invalid_login">Usuário não encontrado!</string>
+    <string name="invalid_account">Usuário ou senha informados não encontrados!</string>
+    <string name="account_already_exists">Conta já cadastrada!</string>
+    <string name="account_created">Conta criada com sucesso!</string>
+    <string name="user_id">userId</string>
+    <string name="hint_password_again">Digite a senha novamente</string>
+    <string name="required_field">Campo obrigatório não informado.</string>
+    <string name="passwords_doesnt_match">Senhas não conferem!</string>
+    <string name="create_new_password">Criar nova senha</string>
+    <string name="password_updated">Senha alterada com sucesso!</string>
+    <string name="register_new_password">Cadastrar nova senha</string>
+    <string name="clear">Limpar</string>
+</resources>

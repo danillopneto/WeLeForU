@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCleanBlue"
+    android:orientation="vertical"
+    tools:context="br.ufg.inf.weleforu.MainActivity">
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:gravity="end"
+        android:background="@color/colorClean"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@id/user"
+        android:text="@string/welcome_message"/>
+
+</RelativeLayout>
+
+

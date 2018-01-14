@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorCleanBlue"
+    android:orientation="vertical"
+    tools:context="br.ufg.inf.weleforu.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/containerLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorClean"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"
+            android:id="@+id/password" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorClean"
+            android:onClick="login" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorClean"
+            android:onClick="clear" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/forgotPassword"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:onClick="forgotPassword" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:background="@null"
+        android:layout_below="@id/containerLogin"
+        android:id="@+id/registerButton"
+        android:onClick="register" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:gravity="bottom"
+        android:text="@string/author_message"
+        android:layout_below="@id/registerButton"/>
+
+</RelativeLayout>
+
