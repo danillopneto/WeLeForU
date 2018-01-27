@@ -1,5 +1,8 @@
 package br.ufg.inf.weleforu.model;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import java.util.HashMap;
 import br.ufg.inf.weleforu.App;
 import br.ufg.inf.weleforu.R;
@@ -9,6 +12,7 @@ import br.ufg.inf.weleforu.R;
  */
 
 public final class LoginManager {
+
     private static HashMap<String, String> _validAccounts;
 
     public static boolean loginIsValid(String email) {

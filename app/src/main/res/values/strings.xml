@@ -24,4 +24,16 @@
     <string name="password_updated">Senha alterada com sucesso!</string>
     <string name="register_new_password">Cadastrar nova senha</string>
     <string name="clear">Limpar</string>
+    <string name="instructions">Entre utilizando sua impressão digital</string>
+    <string name="fingerprint_not_supported">Seu dispositivo não suporta autenticação por digital.</string>
+    <string name="turn_fingerprint_on">Por favor, habilite a leitura de impressão digital</string>
+    <string name="fingerprint_not_set">Nenhum impressão digital foi configurada.</string>
+    <string name="fingerprint_security">Por favor, habilite a tela de bloqueio nas configurações do seu dispositivo.</string>
+    <string name="auth_failed">Autenticação falhou</string>
+    <string name="logged_fingerprint">Logado pela digital</string>
+    <string name="logginin">Aguarde logando</string>
+    <string name="logout">Sair</string>
+    <string name="error_no_user">Usuário não encontrado.</string>
+    <string name="error_connection">Você está com problemas de conexão com a internet.</string>
+    <string name="error_field_email">Falha de comunicação com o servidor.</string>
 </resources>
