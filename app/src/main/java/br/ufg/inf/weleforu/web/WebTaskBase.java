@@ -1,4 +1,4 @@
-package br.ufg.inf.weleforu.br.ufg.inf.web;
+package br.ufg.inf.weleforu.web;
 
 /**
  * Created by danil on 1/27/2018.

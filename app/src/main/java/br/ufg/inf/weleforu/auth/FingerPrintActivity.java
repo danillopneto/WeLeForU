@@ -1,4 +1,4 @@
-package br.ufg.inf.weleforu.br.ufg.inf.auth;
+package br.ufg.inf.weleforu.auth;
 
 import android.app.KeyguardManager;
 import android.hardware.fingerprint.FingerprintManager;

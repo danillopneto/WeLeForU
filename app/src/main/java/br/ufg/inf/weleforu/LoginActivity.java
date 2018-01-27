@@ -11,9 +11,9 @@ import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import br.ufg.inf.weleforu.br.ufg.inf.auth.FingerPrintActivity;
-import br.ufg.inf.weleforu.br.ufg.inf.auth.FingerprintHandler;
-import br.ufg.inf.weleforu.br.ufg.inf.web.WebTaskLogin;
+import br.ufg.inf.weleforu.auth.FingerPrintActivity;
+import br.ufg.inf.weleforu.auth.FingerprintHandler;
+import br.ufg.inf.weleforu.web.WebTaskLogin;
 import br.ufg.inf.weleforu.model.LoginManager;
 
 public class LoginActivity extends FingerPrintActivity {

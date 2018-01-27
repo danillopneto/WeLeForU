@@ -9,19 +9,8 @@
     android:orientation="vertical"
     tools:context="br.ufg.inf.weleforu.UserActivity">
 
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/logout"
-        android:textAlignment="center"
-        android:onClick="logout" />
-
     <ImageView
         android:id="@+id/imageview_user"
-        android:layout_below="@id/logout_button"
         android:layout_width="250px"
         android:layout_height="250px"
         android:layout_centerHorizontal="true"
@@ -39,13 +28,13 @@
         android:text="@string/welcome_message"
         android:textAlignment="center" />
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/author"
         android:id="@+id/quotes_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/author"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
 
 

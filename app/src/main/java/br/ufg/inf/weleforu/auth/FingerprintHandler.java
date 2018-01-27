@@ -1,8 +1,7 @@
-package br.ufg.inf.weleforu.br.ufg.inf.auth;
+package br.ufg.inf.weleforu.auth;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
@@ -11,9 +10,8 @@ import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
 import br.ufg.inf.weleforu.App;
-import br.ufg.inf.weleforu.UserActivity;
 import br.ufg.inf.weleforu.R;
-import br.ufg.inf.weleforu.br.ufg.inf.web.WebTaskLogin;
+import br.ufg.inf.weleforu.web.WebTaskLogin;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {

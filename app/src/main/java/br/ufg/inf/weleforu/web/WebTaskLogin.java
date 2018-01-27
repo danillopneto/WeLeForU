@@ -1,4 +1,4 @@
-package br.ufg.inf.weleforu.br.ufg.inf.web;
+package br.ufg.inf.weleforu.web;
 
 /**
  * Created by danil on 1/27/2018.
@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import br.ufg.inf.weleforu.R;
 import br.ufg.inf.weleforu.model.User;
+import br.ufg.inf.weleforu.web.WebTaskBase;
 
 public class WebTaskLogin extends WebTaskBase {
 

@@ -1,30 +1,31 @@
 package br.ufg.inf.weleforu;
 
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import br.ufg.inf.weleforu.br.ufg.inf.web.WebTaskQuotes;
+import br.ufg.inf.weleforu.adapter.QuotesAdapter;
+import br.ufg.inf.weleforu.web.WebTaskQuotes;
 import br.ufg.inf.weleforu.model.Quote;
 import br.ufg.inf.weleforu.model.SessionHandler;
 import br.ufg.inf.weleforu.model.User;
 
 public class UserActivity extends BaseActivity {
     private User user;
+    RecyclerView rvQuotes;
+    QuotesAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,11 @@ public class UserActivity extends BaseActivity {
             user = sh.getUser(this);
             getSupportActionBar().setTitle(user.getUsername());
             ImageView imageView =   findViewById(R.id.imageview_user);
+            rvQuotes = findViewById(R.id.quotes_listview);
+            adapter = new QuotesAdapter(this);
+            rvQuotes.setAdapter(adapter);
+            rvQuotes.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
             Picasso.with(this).load(user.getPhotoUrl()).into(imageView);
             EventBus.getDefault().register(this);
             WebTaskQuotes webtask = new WebTaskQuotes(this, user.getToken());
@@ -60,20 +66,26 @@ public class UserActivity extends BaseActivity {
 
     @Subscribe
     public void onQuotes(List<Quote> quotes) {
-        ListView listView = findViewById(R.id.quotes_listview);
-        ArrayList<String> mensagens = new ArrayList<String>();
-        for (Quote quote : quotes) {
-            mensagens.add(quote.getQuote());
-        }
-
-        // Create an ArrayAdapter from List
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (getApplicationContext(), android.R.layout.simple_list_item_1, mensagens);
-        listView.setAdapter(arrayAdapter);
-        arrayAdapter.notifyDataSetChanged();
+        adapter.setQuotesList(quotes);
+        adapter.notifyDataSetChanged();
     }
 
-    public void logout(View v) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_quote, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.logout) {
+            logout();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void logout() {
         new SessionHandler().removeSession(getApplicationContext());
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);

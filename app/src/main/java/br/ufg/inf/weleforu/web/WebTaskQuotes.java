@@ -1,4 +1,4 @@
-package br.ufg.inf.weleforu.br.ufg.inf.web;
+package br.ufg.inf.weleforu.web;
 
 /**
  * Created by danil on 1/27/2018.
@@ -10,7 +10,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.greenrobot.eventbus.EventBus;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
@@ -19,9 +18,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import br.ufg.inf.weleforu.R;
 import br.ufg.inf.weleforu.model.Quote;
-import br.ufg.inf.weleforu.model.User;
+import br.ufg.inf.weleforu.web.WebTaskBase;
 
 public class WebTaskQuotes extends WebTaskBase {
 
